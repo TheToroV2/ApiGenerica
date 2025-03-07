@@ -16,6 +16,7 @@
     <!-- Permite la generación de documentación para la API -->
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <PackageReference Include="System.Data.Common" Version="4.3.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.6.1" />
     <PackageReference Include="System.Text.Json" Version="9.0.2" />
     <!-- Proporciona la interfaz de Swagger para probar la API -->
   </ItemGroup>
