@@ -174,3 +174,4 @@ C:\Users\Samuel\Desktop\Software Classes\csharpapi2\csharpapi\obj\Debug\net8.0\r
 C:\Users\Samuel\Desktop\Software Classes\csharpapi2\csharpapi\obj\Debug\net8.0\csharpapi.pdb
 C:\Users\Samuel\Desktop\Software Classes\csharpapi2\csharpapi\obj\Debug\net8.0\csharpapi.genruntimeconfig.cache
 C:\Users\Samuel\Desktop\Software Classes\csharpapi2\csharpapi\obj\Debug\net8.0\ref\csharpapi.dll
+C:\Users\Samuel\Desktop\Software Classes\csharpapi2\csharpapi\obj\Debug\net8.0\csharpapi.sourcelink.json
