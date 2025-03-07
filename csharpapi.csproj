@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework> <!-- Especifica que el proyecto usa .NET 8.0 -->
+    <Nullable>enable</Nullable> <!-- Habilita el uso de valores nulos en C# -->
+    <ImplicitUsings>enable</ImplicitUsings> <!-- Permite el uso automático de ciertos `using` en C# -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Define las dependencias del proyecto -->
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.6" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.2" />
+    <!-- Permite la generación de documentación para la API -->
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="System.Data.Common" Version="4.3.0" />
+    <PackageReference Include="System.Text.Json" Version="9.0.2" />
+    <!-- Proporciona la interfaz de Swagger para probar la API -->
+  </ItemGroup>
+
+</Project>
