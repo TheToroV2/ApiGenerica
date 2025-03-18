@@ -320,7 +320,7 @@ namespace ProyectoBackendCsharp.Controllers
         /// <response code="400">El nombre de la tabla o los datos de la entidad están vacíos.</response>
         /// <response code="500">Error interno del servidor.</response>
         [AllowAnonymous] // Permite que cualquier usuario acceda a este método sin necesidad de autenticación.
-        [HttpPost("crear")] // Indica que este método maneja solicitudes HTTP POST.
+        [HttpPost] // Indica que este método maneja solicitudes HTTP POST.
         public IActionResult Crear(string nombreProyecto, string nombreTabla, [FromBody] Dictionary<string, object?> datosEntidad)
         {
             // Verifica si el nombre de la tabla es nulo o vacío, o si los datos a insertar están vacíos.
