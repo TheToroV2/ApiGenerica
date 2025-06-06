@@ -604,13 +604,22 @@ namespace ProyectoBackendCsharp.Controllers
                 string contrasenaHasheada = resultado.Rows[0][campoContrasena]?.ToString() ?? string.Empty;
 
                 // Verifica que el valor almacenado sea un hash válido de BCrypt (debe comenzar con "$2").
-                if (!contrasenaHasheada.StartsWith("$2"))
+                /**if (!contrasenaHasheada.StartsWith("$2"))
                 {
                     throw new InvalidOperationException("El hash de la contraseña almacenada no es un hash válido de BCrypt.");
                 }
-
-                // Compara la contraseña en texto plano con el hash almacenado utilizando BCrypt.
+                **/
+    
+                /** Compara la contraseña en texto plano con el hash almacenado utilizando BCrypt.
                 bool esContrasenaValida = BCrypt.Net.BCrypt.Verify(valorContrasena, contrasenaHasheada);
+                **/
+
+                //Areglo temporal PARA NO USA HASH
+                bool esContrasenaValida = valorContrasena == contrasenaHasheada;
+
+                Console.WriteLine($"DB: '{contrasenaHasheada}' vs INPUT: '{valorContrasena}'");
+                Console.WriteLine($"Length DB: {contrasenaHasheada.Length}, Length Input: {valorContrasena.Length}");
+
 
                 // Si la contraseña es correcta, retorna un mensaje de éxito.
                 if (esContrasenaValida)
@@ -643,6 +652,7 @@ namespace ProyectoBackendCsharp.Controllers
         [HttpPost("ejecutar-consulta-parametrizada")] // Define la ruta HTTP POST como "/api/{nombreProyecto}/{nombreTabla}/ejecutar-consulta-parametrizada".
         public IActionResult EjecutarConsultaParametrizada([FromBody] JsonElement cuerpoSolicitud)
         {
+
             try
             {
                 // Verifica si el cuerpo de la solicitud contiene la consulta SQL
